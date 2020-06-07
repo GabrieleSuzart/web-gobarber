@@ -15,6 +15,8 @@ import { Theme } from '../theme';
  *  alignItems: 'center'
  * }])
  */
+
+// eslint-disable-next-line @typescript-eslint/explicit-function-return-type
 export const buildResponsiveStyles = (styles: CSSObject[], theme: Theme) =>
   styles.reduce((cssObject, cssProps, i) => {
     if (i === 0) {

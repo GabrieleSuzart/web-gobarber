@@ -1,8 +1,7 @@
-// @ts-nocheck
-export { Stack, StackProps } from './components/stack';
-export { Box, BoxProps } from './components/box';
-export { Center, CenterProps } from './components/center';
-export { Text, TextProps } from './components/text';
-export { Grid, GridProps } from './components/grid';
+export { Stack } from './components/stack';
+export { Box } from './components/box';
+export { Center } from './components/center';
+export { Text } from './components/text';
+export { Grid } from './components/grid';
 
 export { theme } from './theme';

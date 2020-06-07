@@ -1,5 +1,3 @@
-/* eslint-disable no-shadow */
-/* eslint-disable react/prop-types */
 /* eslint-disable @typescript-eslint/no-non-null-assertion */
 import React, { FC } from 'react';
 import * as CSS from 'csstype';
@@ -36,14 +34,14 @@ const Component = styled.div<StackProps>(
     },
   },
   ({ layout, margin, theme }) => {
-    const styles = toArray(layout).map<CSSObject>(layout => {
-      if (layout === 'hidden') {
+    const styles = toArray(layout).map<CSSObject>(layoutItem => {
+      if (layoutItem === 'hidden') {
         return {
           display: 'none',
         };
       }
 
-      if (layout === 'horizontal') {
+      if (layoutItem === 'horizontal') {
         return {
           display: 'flex',
           alignItems: 'center',
@@ -68,6 +66,7 @@ const Component = styled.div<StackProps>(
   alignItems,
 );
 
+// eslint-disable-next-line react/prop-types
 export const Stack: FC<StackProps> = ({ htmlAttrs = {}, ...rest }) => {
   return <Component {...htmlAttrs} {...rest} />;
 };

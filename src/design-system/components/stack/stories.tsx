@@ -1,5 +1,6 @@
+/* eslint-disable @typescript-eslint/explicit-function-return-type */
 /* eslint-disable react/no-array-index-key */
-import React, { FC } from 'react';
+import React from 'react';
 import styled from 'styled-components';
 
 import { withContainer } from '../../helpers/decorators';
@@ -13,11 +14,11 @@ export default {
 
 const Container = styled.div`
   & > div {
-    border: 5px solid #333;
+    border: 5px solid red;
   }
 `;
 
-const ExampleBody: FC = () => (
+const ExampleBody = () => (
   <>
     {Array.from({ length: 3 }).map((_, i) => (
       <div
@@ -35,7 +36,7 @@ const ExampleBody: FC = () => (
   </>
 );
 
-export const base: FC = () => (
+export const base = () => (
   <Container>
     <Stack>
       <ExampleBody />
@@ -43,7 +44,7 @@ export const base: FC = () => (
   </Container>
 );
 
-export const vertical: FC = () => (
+export const vertical = () => (
   <Container>
     <Stack layout="vertical">
       <ExampleBody />
@@ -51,7 +52,7 @@ export const vertical: FC = () => (
   </Container>
 );
 
-export const horizontal: FC = () => (
+export const horizontal = () => (
   <Container>
     <Stack layout="horizontal">
       <ExampleBody />
@@ -59,7 +60,7 @@ export const horizontal: FC = () => (
   </Container>
 );
 
-export const responsive: FC = () => (
+export const responsive = () => (
   <Container>
     <Stack layout={['horizontal', 'hidden', 'vertical']}>
       <ExampleBody />
