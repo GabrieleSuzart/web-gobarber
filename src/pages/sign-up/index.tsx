@@ -1,15 +1,27 @@
-import React from 'react';
+import React, { useCallback } from 'react';
 import { FiArrowLeft, FiMail, FiLock, FiUser } from 'react-icons/fi';
 import { Form } from '@unform/web';
-
+import * as Yup from 'yup';
 import logoImg from '../../assets/logo.svg';
 import { Container, Content, Background } from './styles';
 import { Stack, Text, Input, Button } from '../../design-system';
 
 export const SignUp: React.FC = () => {
-  const handleSubmit = (data: object): void => {
-    console.log(data);
-  };
+  const handleSubmit = useCallback(async (data: object) => {
+    try {
+      const schema = Yup.object().shape({
+        name: Yup.string().required('Nome obrigatório'),
+        email: Yup.string().required('E-mail obrigatório').email(),
+        password: Yup.string().min(6, 'No mínimo 6 dígitos'),
+      });
+
+      await schema.validate(data, {
+        abortEarly: false,
+      });
+    } catch (err) {
+      console.log('Erro ao preencher formulário', err);
+    }
+  }, []);
 
   return (
     <Container>
