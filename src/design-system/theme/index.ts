@@ -21,6 +21,7 @@ const colors = {
   lightDark: '#312e38',
   orange: '#ff9000',
   dawnPink: '#F4EDE8',
+  error: '#c53030',
 };
 
 const fonts = {
@@ -30,7 +31,9 @@ const fonts = {
 
 const fontSizes = {
   /** 12px */
-  x1: '0.750rem',
+  x0: '0.750rem',
+  /** 14px */
+  x1: '0.875rem',
   /** 16px */
   x2: '1.000rem',
   /** 24px */

@@ -5,5 +5,6 @@ export { Center } from './components/center';
 export { Text } from './components/text';
 export { Grid } from './components/grid';
 export { Button } from './components/button';
+export { Tooltip } from './components/tooltip';
 
 export { theme } from './theme';
