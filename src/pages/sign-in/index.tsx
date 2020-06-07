@@ -1,8 +1,9 @@
 import React from 'react';
-import { FiLogIn } from 'react-icons/fi';
+import { FiLogIn, FiMail, FiLock } from 'react-icons/fi';
 
 import logoImg from '../../assets/logo.svg';
-import { Container, Content, Background } from './styles';
+import { Container, Content, Background, InputGroup } from './styles';
+import { Stack, Text } from '../../design-system';
 
 export const SignIn: React.FC = () => (
   <Container>
@@ -10,15 +11,27 @@ export const SignIn: React.FC = () => (
       <img src={logoImg} alt="Go Barber" />
 
       <form>
-        <h1>Faça seu logon</h1>
+        <Stack margin="x3">
+          <Text as="h1" textSize="x4" textAlign="center">
+            Faça seu logon
+          </Text>
+          <Stack margin="x1">
+            <InputGroup>
+              <FiMail size={20} />
+              <input type="email" placeholder="E-mail" />
+            </InputGroup>
 
-        <input type="email" placeholder="E-mail" />
+            <InputGroup>
+              <FiLock size={20} />
+              <input type="password" placeholder="Senha" />
+            </InputGroup>
+          </Stack>
+          <Stack>
+            <button type="submit">Entrar</button>
 
-        <input type="password" placeholder="Senha" />
-
-        <button type="submit">Entrar</button>
-
-        <a href="forgot">Esqueci minha senha</a>
+            <a href="forgot">Esqueci minha senha</a>
+          </Stack>
+        </Stack>
       </form>
 
       <a href="signup">

@@ -14,8 +14,13 @@ const colors = {
   inherit: 'inherit',
   transparent: 'transparent',
 
-  gray: '#666666',
+  gray: '#666360',
   muted: '#eeeeee',
+
+  dark: '#232129',
+  lightDark: '#312e38',
+  orange: '#ff9000',
+  dawnPink: '#F4EDE8',
 };
 
 const fonts = {
@@ -40,6 +45,7 @@ const fontSizes = {
 
 const fontWeights = {
   bold: 700,
+  semibold: 500,
   normal: 400,
 };
 
