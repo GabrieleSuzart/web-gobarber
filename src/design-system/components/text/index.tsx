@@ -66,7 +66,6 @@ const Component = styled.p<TextProps>`
     textTransform ? `text-transform: ${textTransform}` : ''};
 `;
 
-// eslint-disable-next-line react/prop-types
 export const Text: FC<TextProps> = ({ htmlAttrs = {}, ...rest }) => (
   <Component {...htmlAttrs} {...rest} />
 );

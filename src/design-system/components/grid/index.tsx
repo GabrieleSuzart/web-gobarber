@@ -31,7 +31,6 @@ const Component: FC<GridProps> = styled.div<GridProps>`
   ${grid};
 `;
 
-// eslint-disable-next-line react/prop-types
 export const Grid: FC<GridProps> = ({ htmlAttrs = {}, ...rest }) => (
   <Component {...htmlAttrs} {...rest} />
 );

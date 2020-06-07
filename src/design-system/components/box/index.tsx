@@ -99,7 +99,6 @@ const Component: FC<BoxProps> = styled.div<BoxProps>`
   ${({ hasRoundedCorner }) => (hasRoundedCorner ? 'border-radius: 8px' : '')};
 `;
 
-// eslint-disable-next-line react/prop-types
 export const Box: FC<BoxProps> = ({ htmlAttrs = {}, ...rest }) => (
   <Component {...htmlAttrs} {...rest} />
 );

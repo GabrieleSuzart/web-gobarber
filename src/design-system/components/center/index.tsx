@@ -36,7 +36,6 @@ const Component: FC<CenterProps> = styled.div<CenterProps>`
   ${({ hasTextCentered }) => (hasTextCentered ? 'text-align: center' : '')};
 `;
 
-// eslint-disable-next-line react/prop-types
 export const Center: FC<CenterProps> = ({ htmlAttrs = {}, ...rest }) => (
   <Component {...htmlAttrs} {...rest} />
 );

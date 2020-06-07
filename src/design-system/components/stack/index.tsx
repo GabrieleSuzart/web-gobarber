@@ -66,7 +66,6 @@ const Component = styled.div<StackProps>(
   alignItems,
 );
 
-// eslint-disable-next-line react/prop-types
 export const Stack: FC<StackProps> = ({ htmlAttrs = {}, ...rest }) => {
   return <Component {...htmlAttrs} {...rest} />;
 };
