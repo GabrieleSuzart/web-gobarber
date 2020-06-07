@@ -5,6 +5,7 @@
   "dependencies": {
     "@testing-library/jest-dom": "^5.9.0",
     "axios": "^0.19.2",
+    "csstype": "^2.6.10",
     "filesize": "^6.1.0",
     "history": "^4.10.1",
     "polished": "^3.5.2",
@@ -15,13 +16,16 @@
     "react-router-dom": "^5.1.2",
     "react-scripts": "3.4.1",
     "styled-components": "^5.1.0",
+    "styled-system": "^5.1.5",
     "typescript": "~3.7.2"
   },
   "scripts": {
     "start": "react-app-rewired start",
     "build": "react-app-rewired build",
     "test": "react-app-rewired test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "storybook": "start-storybook -p 9009 -s public",
+    "build-storybook": "build-storybook -s public"
   },
   "browserslist": {
     "production": [
@@ -36,6 +40,11 @@
     ]
   },
   "devDependencies": {
+    "@storybook/addon-actions": "^5.3.19",
+    "@storybook/addon-links": "^5.3.19",
+    "@storybook/addons": "^5.3.19",
+    "@storybook/preset-create-react-app": "^3.0.0",
+    "@storybook/react": "^5.3.19",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
     "@types/axios": "^0.14.0",
@@ -43,8 +52,11 @@
     "@types/node": "^12.0.0",
     "@types/react": "^16.9.0",
     "@types/react-dom": "^16.9.0",
+    "@types/react-modal": "^3.10.5",
     "@types/react-router-dom": "^5.1.4",
     "@types/styled-components": "^5.1.0",
+    "@types/styled-system": "^5.1.9",
+    "@types/warning": "^3.0.0",
     "@typescript-eslint/eslint-plugin": "^2.28.0",
     "@typescript-eslint/parser": "^2.28.0",
     "axios-mock-adapter": "^1.18.1",
